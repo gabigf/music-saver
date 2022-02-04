@@ -48,7 +48,8 @@ export default {
           coverUrl: url.value,
           filePath: filePath.value,
           songs: [],
-          createdAt: timestamp()
+          createdAt: timestamp(),
+          likes: []
          })
          isPending.value = false
          if(!error.value) {

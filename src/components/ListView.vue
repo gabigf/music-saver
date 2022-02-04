@@ -26,6 +26,7 @@ export default {
 <style scoped>
 .single {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
@@ -54,5 +55,9 @@ export default {
   }
   .song-number {
     margin-left: auto;
+  }
+  .likes {
+    z-index: 100;
+
   }
 </style>

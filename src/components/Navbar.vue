@@ -2,7 +2,7 @@
   <div class="navbar">
     <nav>
       <img src="@/assets/Logo.png" alt="Music Saver Logo">
-      <h1><router-link :to="{ name: 'Home' }">Music Saver</router-link></h1>
+      <h1><router-link :to="{ name: 'Home' }">Playlister</router-link></h1>
       <div class="links">
         <div v-if="user">
           <span>Hi there, {{ user.displayName }}</span>

@@ -20,10 +20,7 @@ export default {
 
     
 
-
     return { documents, error }
-
-
   }
 }
 </script>

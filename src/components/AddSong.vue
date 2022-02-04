@@ -2,7 +2,10 @@
   <div class="add-song">
     <button v-if="!showForm" @click="showForm = true">Add Song</button>
     <form v-if="showForm" @submit.prevent="handleSubmit">
-      <h4>Add a new song</h4>
+      <div class="top">
+        <h4>Add a new song</h4>
+        <button class="close-btn" @click="showForm=false">X</button>
+      </div>
       <input type="text" placeholder="Song title" required v-model="title"> 
       <input type="text" placeholder="Artist" required v-model="artist">
       <button>Add</button>
@@ -26,7 +29,8 @@ export default {
       const newSong = {
         title: title.value,
         artist: artist.value,
-        id: Math.floor(Math.random() * 1000000)
+        id: Math.floor(Math.random() * 1000000),
+        likes: []
       }
       await updateDoc({
         songs: [...props.playlist.songs, newSong]
@@ -49,5 +53,10 @@ export default {
   form {
     max-width: 100%;
     text-align: left;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>
